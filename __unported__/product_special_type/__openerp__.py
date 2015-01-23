@@ -42,9 +42,7 @@ discounts / advances / fees separately.
     "website": "http://camptocamp.com",
     "depends": ['base',
                 'product', ],
-    "init_xml": [],
-    "demo_xml": [],
-    "update_xml": ['product_view.xml'],
-    "active": False,
-    'installable': False
+	'data': ["product_view.xml"],
+    'test': [],
+    'installable': True,
 }
