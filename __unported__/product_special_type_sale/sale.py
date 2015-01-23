@@ -19,10 +19,10 @@
 #
 #
 
-import decimal_precision as dp
+import openerp.addons.decimal_precision as dp
 
 from operator import add
-from osv import osv, fields
+from openerp.osv import fields, osv
 
 
 class sale_order(osv.osv):

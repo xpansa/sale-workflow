@@ -33,9 +33,7 @@ totals on sales.
     "website": "http://camptocamp.com",
     "depends": ['sale',
                 'product_special_type', ],
-    "init_xml": [],
-    "demo_xml": [],
-    "update_xml": [],
-    "active": False,
-    'installable': False
+    'data': [],
+    'test': [],
+    'installable': True,
 }
