@@ -133,11 +133,11 @@ class SaleOrderLine(models.Model):
         self.ensure_one()
 
         if (
-            self.product_id
-            and self.product_id.type == 'product'
-            and self._is_make_to_stock()
-            and self._get_line_location()
-            and self._get_line_location().usage == 'internal'
+            self.product_id and
+            self.product_id.type == 'product' and
+            self._is_make_to_stock() and
+            self._get_line_location() and
+            self._get_line_location().usage == 'internal'
         ):
             return False
         else:
@@ -169,6 +169,13 @@ class SaleOrderLine(models.Model):
             'compute_child': True,
             'location': location.id,
             }
+
+        try:
+            ctx['owner_id'] = self.stock_owner_id.id
+        except AttributeError:
+            # module sale_owner_stock_sourcing not installed, fine
+            pass
+
         # Virtual qty is made on all childs of chosen location
         prod_for_virtual_qty = (self.product_id
                                 .with_context(ctx)
@@ -232,6 +239,13 @@ class SaleOrderLine(models.Model):
             'compute_child': True,
             'location_id': location.id,
             }
+
+        try:
+            ctx['owner_id'] = self.stock_owner_id.id
+        except AttributeError:
+            # module sale_owner_stock_sourcing not installed, fine
+            pass
+
         # Virtual qty is made on all childs of chosen location
         dates = self._get_affected_dates(location.id, self.product_id.id,
                                          delivery_date)
