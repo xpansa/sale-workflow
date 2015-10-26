@@ -3,13 +3,14 @@
 # * partner_prepayment
 # 
 # Translators:
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: sale-workflow (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-09 12:27+0000\n"
-"PO-Revision-Date: 2015-09-03 07:08+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2015-10-23 08:14+0000\n"
+"PO-Revision-Date: 2015-10-21 10:08+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-sale-workflow-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,11 +31,11 @@ msgstr "Pedidos de venta"
 #. module: partner_prepayment
 #: field:res.partner,use_prepayment:0
 msgid "Use prepayment"
-msgstr ""
+msgstr "Usar prepago"
 
 #. module: partner_prepayment
 #: help:res.partner,use_prepayment:0
 msgid ""
 "When prepayment is activated, the sales order policy will be automatically "
 "defined to pay before delivery."
-msgstr ""
+msgstr "Cuando se activa el prepago, la política de facturación de los pedidos de venta se establece automáticamente a \"Antes del envío\"."
